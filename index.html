@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans transition-colors duration-500">
+
+  <!-- Header -->
+  <header class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold">Your Name</h1>
+      <div class="flex items-center space-x-4">
+        <nav class="space-x-4 hidden md:flex">
+          <a href="#about" class="hover:text-blue-500">About</a>
+          <a href="#skills" class="hover:text-blue-500">Skills</a>
+          <a href="#projects" class="hover:text-blue-500">Projects</a>
+          <a href="#contact" class="hover:text-blue-500">Contact</a>
+        </nav>
+        <!-- Dark/Light Mode Toggle -->
+        <button id="toggleTheme" class="p-2 rounded-md bg-gray-200 dark:bg-gray-700">
+          <i data-feather="sun" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-blue-100 to-white dark:from-gray-800 dark:to-gray-900 pt-20">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Your Name</h2>
+    <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-xl mb-6">Python Backend Developer | ASP.NET Enthusiast | Data Analyst</p>
+    <a href="#projects" class="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 transition">View Projects</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container mx-auto py-20 px-4">
+    <h3 class="text-3xl font-bold mb-6 text-center">About Me</h3>
+    <p class="text-gray-700 dark:text-gray-300 max-w-3xl mx-auto text-center">
+      I am a passionate software developer with 2+ years of experience in Python backend development and ASP.NET. I build scalable, data-driven applications and enjoy turning ideas into real-world solutions.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-gray-100 dark:bg-gray-800 py-20 px-4">
+    <h3 class="text-3xl font-bold mb-10 text-center">Skills</h3>
+    <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-md shadow hover:shadow-xl transition flex flex-col items-center">
+        <i data-feather="cpu" class="w-10 h-10 mb-2"></i>
+        <span>Python</span>
+      </div>
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-md shadow hover:shadow-xl transition flex flex-col items-center">
+        <i data-feather="code" class="w-10 h-10 mb-2"></i>
+        <span>ASP.NET</span>
+      </div>
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-md shadow hover:shadow-xl transition flex flex-col items-center">
+        <i data-feather="database" class="w-10 h-10 mb-2"></i>
+        <span>SQL</span>
+      </div>
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-md shadow hover:shadow-xl transition flex flex-col items-center">
+        <i data-feather="bar-chart-2" class="w-10 h-10 mb-2"></i>
+        <span>Data Analysis</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container mx-auto py-20 px-4">
+    <h3 class="text-3xl font-bold mb-10 text-center">Projects</h3>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+      <div class="bg-white dark:bg-gray-700 rounded-md shadow-md p-6 hover:shadow-xl transition">
+        <h4 class="text-xl font-bold mb-2">EduTrack – Student Performance Analysis</h4>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Analyzed student exam performance and institutional effectiveness using Python and data visualization tools.</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Tech Stack: Python, Pandas, Matplotlib, Seaborn</p>
+        <a href="YOUR_GITHUB_LINK" class="text-blue-500 hover:underline">View on GitHub</a>
+      </div>
+      <div class="bg-white dark:bg-gray-700 rounded-md shadow-md p-6 hover:shadow-xl transition">
+        <h4 class="text-xl font-bold mb-2">HealthLens – Heart Disease Prediction</h4>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Developed a predictive model for heart disease using UCI dataset and Python ML algorithms.</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Tech Stack: Python, Scikit-learn, Pandas, Matplotlib</p>
+        <a href="YOUR_GITHUB_LINK" class="text-blue-500 hover:underline">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-blue-500 dark:bg-blue-700 text-white py-20 px-4">
+    <h3 class="text-3xl font-bold mb-6 text-center">Contact Me</h3>
+    <p class="text-center mb-6">Feel free to reach out for collaborations or opportunities.</p>
+    <div class="max-w-xl mx-auto text-center space-y-4">
+      <p>Email: <a href="mailto:your.email@example.com" class="underline">your.email@example.com</a></p>
+      <p>LinkedIn: <a href="YOUR_LINKEDIN_LINK" class="underline">linkedin.com/in/yourprofile</a></p>
+      <p>GitHub: <a href="YOUR_GITHUB_LINK" class="underline">github.com/yourusername</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
+
+  <script>
+    // Activate feather icons
+    feather.replace();
+
+    // Dark/light mode toggle
+    const toggle = document.getElementById('toggleTheme');
+    toggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      // Swap icon
+      const icon = toggle.querySelector('i');
+      icon.setAttribute('data-feather', document.documentElement.classList.contains('dark') ? 'moon' : 'sun');
+      feather.replace();
+    });
+  </script>
+</body>
+</html>
