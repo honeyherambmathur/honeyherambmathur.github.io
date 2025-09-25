@@ -6,10 +6,11 @@
   <title>Honey Mathur | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/feather-icons"></script>
+  <!-- GitHub Calendar & Stats -->
+  <link rel="stylesheet" href="https://unpkg.com/github-calendar/dist/github-calendar-responsive.css"/>
+  <script src="https://unpkg.com/github-calendar"></script>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans transition-colors duration-500">
@@ -23,9 +24,10 @@
           <a href="#about" class="hover:text-blue-500">About</a>
           <a href="#skills" class="hover:text-blue-500">Skills</a>
           <a href="#projects" class="hover:text-blue-500">Projects</a>
+          <a href="#github" class="hover:text-blue-500">GitHub</a>
           <a href="#contact" class="hover:text-blue-500">Contact</a>
+          <a href="assets/resume/Honey-Mathur-Resume.pdf" download="Honey-Mathur-Resume.pdf" class="hover:text-blue-500">Resume</a>
         </nav>
-        <!-- Dark/Light Mode Toggle -->
         <button id="toggleTheme" class="p-2 rounded-md bg-gray-200 dark:bg-gray-700">
           <i data-feather="sun" class="w-5 h-5"></i>
         </button>
@@ -34,39 +36,67 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-blue-100 to-white dark:from-gray-800 dark:to-gray-900 pt-20">
+  <section id="about" class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-blue-100 to-white dark:from-gray-800 dark:to-gray-900 pt-20">
+    <img src="assets/professional-photo.jpg" alt="Honey Mathur" class="w-40 h-40 md:w-48 md:h-48 rounded-full mb-4 border-4 border-blue-900 shadow-lg">
     <h2 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Honey Mathur</h2>
     <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-xl mb-6">Python Backend Developer | ASP.NET Enthusiast | Data Analyst</p>
-    <a href="#projects" class="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 transition">View Projects</a>
+    <div class="flex gap-4">
+      <a href="assets/resume/Honey-Mathur-Resume.pdf" download="Honey-Mathur-Resume.pdf" class="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-md transition">Download Resume</a>
+      <a href="https://drive.google.com/file/d/YOUR_GOOGLE_DRIVE_ID/view" target="_blank" class="bg-blue-900 hover:bg-blue-800 text-white px-6 py-3 rounded-md transition">View Online</a>
+    </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="container mx-auto py-20 px-4">
-    <h3 class="text-3xl font-bold mb-6 text-center">About Me</h3>
-    <p class="text-gray-700 dark:text-gray-300 max-w-3xl mx-auto text-center">
-      I am a passionate software developer with 2+ years of experience in Python backend development and ASP.NET. I build scalable, data-driven applications and enjoy turning ideas into real-world solutions.
-    </p>
-  </section>
-
-  <!-- Skills Section -->
+  <!-- Skills & Tools Section -->
   <section id="skills" class="bg-gray-100 dark:bg-gray-800 py-20 px-4">
-    <h3 class="text-3xl font-bold mb-10 text-center">Skills</h3>
-    <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
-      <div class="bg-white dark:bg-gray-700 p-6 rounded-md shadow hover:shadow-xl transition flex flex-col items-center">
-        <i data-feather="cpu" class="w-10 h-10 mb-2"></i>
-        <span>Python</span>
+    <h3 class="text-3xl font-bold mb-10 text-center text-blue-900">Skills & Tools</h3>
+
+    <!-- Technologies -->
+    <h4 class="text-2xl font-semibold mb-6 text-center text-blue-700">Technologies</h4>
+    <div class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center mb-12">
+      <div class="flex flex-col items-center">
+        <img src="assets/skills/html.png" alt="HTML" class="w-16 h-16 mb-2">
+        <span class="text-gray-700 dark:text-gray-300">HTML</span>
       </div>
-      <div class="bg-white dark:bg-gray-700 p-6 rounded-md shadow hover:shadow-xl transition flex flex-col items-center">
-        <i data-feather="code" class="w-10 h-10 mb-2"></i>
-        <span>ASP.NET</span>
+      <div class="flex flex-col items-center">
+        <img src="assets/skills/css.png" alt="CSS" class="w-16 h-16 mb-2">
+        <span class="text-gray-700 dark:text-gray-300">CSS</span>
       </div>
-      <div class="bg-white dark:bg-gray-700 p-6 rounded-md shadow hover:shadow-xl transition flex flex-col items-center">
-        <i data-feather="database" class="w-10 h-10 mb-2"></i>
-        <span>SQL</span>
+      <div class="flex flex-col items-center">
+        <img src="assets/skills/javascript.png" alt="JavaScript" class="w-16 h-16 mb-2">
+        <span class="text-gray-700 dark:text-gray-300">JavaScript</span>
       </div>
-      <div class="bg-white dark:bg-gray-700 p-6 rounded-md shadow hover:shadow-xl transition flex flex-col items-center">
-        <i data-feather="bar-chart-2" class="w-10 h-10 mb-2"></i>
-        <span>Data Analysis</span>
+      <div class="flex flex-col items-center">
+        <img src="assets/skills/python.png" alt="Python" class="w-16 h-16 mb-2">
+        <span class="text-gray-700 dark:text-gray-300">Python</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="assets/skills/django.png" alt="Django" class="w-16 h-16 mb-2">
+        <span class="text-gray-700 dark:text-gray-300">Django</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="assets/skills/tailwind.png" alt="Tailwind CSS" class="w-16 h-16 mb-2">
+        <span class="text-gray-700 dark:text-gray-300">Tailwind CSS</span>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <h4 class="text-2xl font-semibold mb-6 text-center text-blue-700">Tools</h4>
+    <div class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-items-center">
+      <div class="flex flex-col items-center">
+        <img src="assets/tools/vscode.png" alt="VS Code" class="w-16 h-16 mb-2">
+        <span class="text-gray-700 dark:text-gray-300">VS Code</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="assets/tools/git.png" alt="Git" class="w-16 h-16 mb-2">
+        <span class="text-gray-700 dark:text-gray-300">Git</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="assets/tools/github.png" alt="GitHub" class="w-16 h-16 mb-2">
+        <span class="text-gray-700 dark:text-gray-300">GitHub</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="assets/tools/postman.png" alt="Postman" class="w-16 h-16 mb-2">
+        <span class="text-gray-700 dark:text-gray-300">Postman</span>
       </div>
     </div>
   </section>
@@ -74,20 +104,40 @@
   <!-- Projects Section -->
   <section id="projects" class="container mx-auto py-20 px-4">
     <h3 class="text-3xl font-bold mb-10 text-center">Projects</h3>
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-      <div class="bg-white dark:bg-gray-700 rounded-md shadow-md p-6 hover:shadow-xl transition">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Project Card 1 -->
+      <div class="bg-white dark:bg-gray-700 rounded-md shadow-md p-6 hover:shadow-xl transition flex flex-col justify-between">
+        <img src="assets/projects/edutrack.png" alt="EduTrack" class="w-full h-48 object-cover mb-4 rounded">
         <h4 class="text-xl font-bold mb-2">EduTrack – Student Performance Analysis</h4>
-        <p class="text-gray-700 dark:text-gray-300 mb-4">Analyzed student exam performance and institutional effectiveness using Python and data visualization tools.</p>
+        <p class="text-gray-700 dark:text-gray-300 mb-2">Analyzed student exam performance and institutional effectiveness using Python and data visualization tools.</p>
         <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Tech Stack: Python, Pandas, Matplotlib, Seaborn</p>
-        <a href="YOUR_GITHUB_LINK" class="text-blue-500 hover:underline">View on GitHub</a>
+        <div class="flex gap-4">
+          <a href="https://github.com/honeyherambmathur/Edu-Track-Performance-Analysis" target="_blank" class="flex-1 bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-md text-center transition">GitHub</a>
+          <a href="https://youtu.be/YOUR_DEMO_VIDEO" target="_blank" class="flex-1 bg-blue-900 hover:bg-blue-800 text-white px-4 py-2 rounded-md text-center transition">Demo</a>
+        </div>
       </div>
-      <div class="bg-white dark:bg-gray-700 rounded-md shadow-md p-6 hover:shadow-xl transition">
+      <!-- Project Card 2 -->
+      <div class="bg-white dark:bg-gray-700 rounded-md shadow-md p-6 hover:shadow-xl transition flex flex-col justify-between">
+        <img src="assets/projects/healthlens.png" alt="HealthLens" class="w-full h-48 object-cover mb-4 rounded">
         <h4 class="text-xl font-bold mb-2">HealthLens – Heart Disease Prediction</h4>
-        <p class="text-gray-700 dark:text-gray-300 mb-4">Developed a predictive model for heart disease using UCI dataset and Python ML algorithms.</p>
+        <p class="text-gray-700 dark:text-gray-300 mb-2">Developed a predictive model for heart disease using UCI dataset and Python ML algorithms.</p>
         <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Tech Stack: Python, Scikit-learn, Pandas, Matplotlib</p>
-        <a href="YOUR_GITHUB_LINK" class="text-blue-500 hover:underline">View on GitHub</a>
+        <div class="flex gap-4">
+          <a href="https://github.com/honeyherambmathur/HealthData-IQ-Hospital-Insights-Patient-Analytics" target="_blank" class="flex-1 bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-md text-center transition">GitHub</a>
+          <a href="https://youtu.be/YOUR_DEMO_VIDEO" target="_blank" class="flex-1 bg-blue-900 hover:bg-blue-800 text-white px-4 py-2 rounded-md text-center transition">Demo</a>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- GitHub Stats & Calendar -->
+  <section id="github" class="py-20 px-4 bg-gray-100 dark:bg-gray-800 text-center">
+    <h3 class="text-3xl font-bold mb-10 text-blue-900">GitHub Stats & Contributions</h3>
+    <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
+      <img src="https://github-readme-stats.vercel.app/api?username=honeyherambmathur&show_icons=true&theme=blue-green" class="rounded shadow-md" alt="GitHub Stats">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=honeyherambmathur&layout=compact&theme=blue-green" class="rounded shadow-md" alt="Top Languages">
+    </div>
+    <div id="github-calendar" class="mx-auto max-w-4xl"></div>
   </section>
 
   <!-- Contact Section -->
@@ -96,7 +146,7 @@
     <p class="text-center mb-6">Feel free to reach out for collaborations or opportunities.</p>
     <div class="max-w-xl mx-auto text-center space-y-4">
       <p>Email: <a href="mailto:honeyherambmmathur@gmail.com" class="underline">honeyherambmathur@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/honey-mathur-a8120a16a/" class="underline">linkedin.com/in/yourprofile</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/honey-mathur-a8120a16a/" class="underline">linkedin.com/in/honeyherambmathur</a></p>
       <p>GitHub: <a href="https://github.com/honeyherambmathur/" class="underline">github.com/honeyherambmathur</a></p>
     </div>
   </section>
@@ -114,11 +164,13 @@
     const toggle = document.getElementById('toggleTheme');
     toggle.addEventListener('click', () => {
       document.documentElement.classList.toggle('dark');
-      // Swap icon
       const icon = toggle.querySelector('i');
       icon.setAttribute('data-feather', document.documentElement.classList.contains('dark') ? 'moon' : 'sun');
       feather.replace();
     });
+
+    // GitHub Calendar
+    GitHubCalendar("#github-calendar", "honeyherambmathur", { responsive: true });
   </script>
 </body>
 </html>
